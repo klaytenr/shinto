@@ -1,0 +1,23 @@
+<div style="text-align:center">
+  <h1>Browse the Ledger</h1>
+  <h3>Here you can browse all Shinto Coin transactions.</h3>
+  <table>
+    <caption><h4>Shinto Coin Ledger</h4></caption>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>Amount</th>
+        <th>Value</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody *ngFor='let x of logs'>
+      <tr>
+        <td>{{x.action}}</td>
+        <td>{{x.amount}}</td>
+        <td>{{x.value}}</td>
+        <td><button [routerLink]="['/details/', x.id]">Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
